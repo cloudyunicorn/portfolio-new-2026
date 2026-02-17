@@ -40,11 +40,16 @@ export default function RootLayout({
           <div className="relative flex min-h-screen flex-col">
             <div className="fixed inset-0 -z-10 h-full w-full">
               <FloatingLines
-                linesGradient={["#2E0249", "#570A57", "#A91079"]}
+                linesGradient={["#021497", "#2f7ac1", "#38bca6"]}
                 lineCount={[4, 6, 4]}
                 lineDistance={[0.1, 0.2, 0.1]}
-                animationSpeed={0.5}
-                parallaxStrength={0.1}
+                animationSpeed={1}
+                interactive
+                bendRadius={5}
+                bendStrength={-0.5}
+                mouseDamping={0.05}
+                parallax
+                parallaxStrength={0.2}
                 mixBlendMode="normal"
               />
             </div>
