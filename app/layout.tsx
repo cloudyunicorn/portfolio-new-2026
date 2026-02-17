@@ -38,7 +38,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col">
-            <div className="fixed inset-0 -z-10 h-full w-full">
+            <div className="fixed inset-0 -z-10 h-[100lvh] w-full">
               <FloatingLines
                 linesGradient={["#021497", "#2f7ac1", "#38bca6"]}
                 lineCount={[4, 6, 4]}
