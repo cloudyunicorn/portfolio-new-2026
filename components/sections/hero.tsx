@@ -28,8 +28,10 @@ const fadeUp = {
 export function Hero() {
     return (
         <section id="hero" className="relative overflow-hidden">
-            {/* Subtle bg pattern */}
-            <div className="absolute inset-0 bg-grid dark:bg-grid-dark opacity-50" />
+            {/* Subtle bg pattern and mask for readability */}
+            <div className="absolute inset-0 bg-grid dark:bg-grid-dark opacity-30" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/40 to-background/0 pointer-events-none" />
+            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
 
             <div className="container relative flex min-h-[calc(100vh-4rem)] flex-col-reverse items-center justify-center gap-10 py-12 md:flex-row md:gap-14 lg:gap-20">
                 {/* Text Content */}
@@ -56,12 +58,12 @@ export function Hero() {
                             text="Hi, I'm"
                             delay={100}
                             animateBy="words"
-                            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-tight"
+                            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-tight text-glow"
                         />
                         <GradientText
                             colors={["#6366f1", "#a855f7", "#ec4899", "#6366f1"]}
                             animationSpeed={4}
-                            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-tight"
+                            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-tight text-glow"
                         >
                             Rajat
                         </GradientText>
@@ -77,7 +79,7 @@ export function Hero() {
                         <span>I&apos;m a</span>
                         <RotatingText
                             texts={["Full-Stack Developer", "Software Engineer", "React/Next.js Specialist", "UI/UX Enthusiast"]}
-                            mainClassName="px-2 sm:px-3 py-0.5 bg-accent text-accent-foreground border border-border rounded-lg overflow-hidden"
+                            mainClassName="px-2 sm:px-3 py-0.5 bg-accent/80 backdrop-blur-sm text-accent-foreground border border-border rounded-lg overflow-hidden"
                             staggerFrom="last"
                             staggerDuration={0.025}
                             rotationInterval={2500}
@@ -91,7 +93,7 @@ export function Hero() {
                         variants={fadeUp}
                         initial="hidden"
                         animate="visible"
-                        className="max-w-lg text-sm sm:text-base leading-relaxed text-muted-foreground mb-6"
+                        className="max-w-lg text-sm sm:text-base leading-relaxed text-foreground/90 mb-6 text-glow"
                     >
                         I turn ideas into polished, high-performance web applications using React, Next.js, and modern frontend technologies.
                     </motion.p>

@@ -144,6 +144,10 @@
   padding-inline: 1.5rem;
 }
 
+@utility text-glow {
+  text-shadow: 0 0 15px oklch(var(--background) / 80%), 0 0 2px oklch(var(--background) / 100%);
+}
+
 /* Subtle grid dot pattern */
 @utility bg-grid {
   background-image: radial-gradient(circle, oklch(0.145 0 0 / 6%) 1px, transparent 1px);
