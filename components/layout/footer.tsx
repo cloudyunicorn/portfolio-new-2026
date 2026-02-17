@@ -1,8 +1,11 @@
+"use client"
+
 import Link from "next/link"
 import { Mail } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { Separator } from "@/components/ui/separator"
 import { PERSONAL_INFO } from "@/data/portfolio"
+import ShinyText from "@/components/ShinyText"
 
 export function Footer() {
     return (
@@ -14,7 +17,12 @@ export function Footer() {
                             <span className="text-background font-bold text-xs">R</span>
                         </div>
                         <span className="text-sm text-muted-foreground">
-                            © {new Date().getFullYear()} Rajat. All rights reserved.
+                            <ShinyText
+                                text={`© ${new Date().getFullYear()} Rajat. All rights reserved.`}
+                                speed={4}
+                                color="hsl(var(--muted-foreground))"
+                                shineColor="hsl(var(--foreground))"
+                            />
                         </span>
                     </div>
                     <div className="flex items-center gap-4">

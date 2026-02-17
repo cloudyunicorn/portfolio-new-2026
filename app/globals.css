@@ -150,3 +150,93 @@
   background-image: radial-gradient(circle, oklch(0.95 0 0 / 6%) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+/* StarBorder component animations */
+@keyframes star-movement-bottom {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes star-movement-top {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
+}
+
+@utility animate-star-movement-bottom {
+  animation: star-movement-bottom linear infinite alternate;
+}
+
+@utility animate-star-movement-top {
+  animation: star-movement-top linear infinite alternate;
+}
+
+/* Fluid glass blob animations */
+@keyframes fluid-blob-1 {
+
+  0%,
+  100% {
+    transform: translateX(0%) rotate(0deg);
+  }
+
+  33% {
+    transform: translateX(30%) rotate(5deg);
+  }
+
+  66% {
+    transform: translateX(-20%) rotate(-3deg);
+  }
+}
+
+@keyframes fluid-blob-2 {
+
+  0%,
+  100% {
+    transform: translateX(0%) rotate(0deg);
+  }
+
+  33% {
+    transform: translateX(-30%) rotate(-5deg);
+  }
+
+  66% {
+    transform: translateX(20%) rotate(3deg);
+  }
+}
+
+@keyframes fluid-blob-3 {
+
+  0%,
+  100% {
+    transform: translateX(0%) scale(1);
+  }
+
+  50% {
+    transform: translateX(40%) scale(1.1);
+  }
+}
+
+@utility animate-fluid-blob-1 {
+  animation: fluid-blob-1 12s ease-in-out infinite;
+}
+
+@utility animate-fluid-blob-2 {
+  animation: fluid-blob-2 15s ease-in-out infinite;
+}
+
+@utility animate-fluid-blob-3 {
+  animation: fluid-blob-3 18s ease-in-out infinite;
+}

@@ -6,7 +6,9 @@ import { Menu } from "lucide-react"
 import { motion } from "framer-motion"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
+import DecryptedText from "@/components/DecryptedText"
+import Magnet from "@/components/Magnet"
 
 export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false)
@@ -33,20 +35,28 @@ export function Navbar() {
                         <span className="text-background font-bold text-sm">R</span>
                     </div>
                     <span className="font-bold text-lg tracking-tight hidden sm:inline-block">
-                        Rajat
+                        <DecryptedText
+                            text="Rajat"
+                            speed={80}
+                            maxIterations={8}
+                            animateOn="hover"
+                            sequential
+                            revealDirection="start"
+                        />
                     </span>
                 </Link>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-1">
                     {navItems.map((item) => (
-                        <Link
-                            key={item.href}
-                            href={item.href}
-                            className="px-3 py-2 text-sm font-medium text-muted-foreground rounded-md transition-colors hover:text-foreground hover:bg-accent"
-                        >
-                            {item.name}
-                        </Link>
+                        <Magnet key={item.href} padding={30} magnetStrength={1.5}>
+                            <Link
+                                href={item.href}
+                                className="px-3 py-2 text-sm font-medium text-muted-foreground rounded-md transition-colors hover:text-foreground hover:bg-accent/60"
+                            >
+                                {item.name}
+                            </Link>
+                        </Magnet>
                     ))}
                 </nav>
 
@@ -85,9 +95,7 @@ export function Navbar() {
                                             onClick={() => {
                                                 const targetId = item.href.replace("#", "")
                                                 setIsOpen(false)
-                                                // Wait for sheet close animation, then force-remove scroll locks and scroll
                                                 setTimeout(() => {
-                                                    // Radix Dialog adds these to body - force remove them
                                                     document.body.style.overflow = ""
                                                     document.body.style.pointerEvents = ""
                                                     document.body.style.removeProperty("overflow")

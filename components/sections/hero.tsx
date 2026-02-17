@@ -3,12 +3,18 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Download, Mail } from "lucide-react"
+import { Download, Mail } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { PERSONAL_INFO } from "@/data/portfolio"
+
+import BlurText from "@/components/BlurText"
+import ShinyText from "@/components/ShinyText"
+import RotatingText from "@/components/RotatingText"
+import Magnet from "@/components/Magnet"
+import GradientText from "@/components/GradientText"
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -25,50 +31,67 @@ export function Hero() {
             {/* Subtle bg pattern */}
             <div className="absolute inset-0 bg-grid dark:bg-grid-dark opacity-50" />
 
-            <div className="container relative flex min-h-[calc(100vh-4rem)] flex-col-reverse items-center justify-center gap-12 py-16 md:flex-row md:gap-16">
+            <div className="container relative flex min-h-[calc(100vh-4rem)] flex-col-reverse items-center justify-center gap-10 py-12 md:flex-row md:gap-14 lg:gap-20">
                 {/* Text Content */}
-                <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left">
+                <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left gap-1">
                     <motion.div
                         custom={0}
                         variants={fadeUp}
                         initial="hidden"
                         animate="visible"
-                        className="mb-4"
+                        className="mb-3"
                     >
-                        <span className="inline-block rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-medium text-muted-foreground tracking-wide uppercase">
-                            Available for work
-                        </span>
+                        {/* <span className="inline-block rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-medium tracking-wide uppercase">
+                            <ShinyText
+                                text="Available for work"
+                                speed={3}
+                                color="hsl(var(--muted-foreground))"
+                                shineColor="hsl(var(--foreground))"
+                            />
+                        </span> */}
                     </motion.div>
 
-                    <motion.h1
-                        custom={1}
-                        variants={fadeUp}
-                        initial="hidden"
-                        animate="visible"
-                        className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-4 leading-[1.1]"
-                    >
-                        Hi, I&apos;m{" "}
-                        <span className="bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
+                    <div className="mb-2">
+                        <BlurText
+                            text="Hi, I'm"
+                            delay={100}
+                            animateBy="words"
+                            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-tight"
+                        />
+                        <GradientText
+                            colors={["#6366f1", "#a855f7", "#ec4899", "#6366f1"]}
+                            animationSpeed={4}
+                            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-tight"
+                        >
                             Rajat
-                        </span>
-                    </motion.h1>
+                        </GradientText>
+                    </div>
 
-                    <motion.p
+                    <motion.div
                         custom={2}
                         variants={fadeUp}
                         initial="hidden"
                         animate="visible"
-                        className="text-lg sm:text-xl text-muted-foreground mb-2 font-medium"
+                        className="text-base sm:text-lg text-muted-foreground mb-3 font-medium flex items-center gap-2 flex-wrap"
                     >
-                        {PERSONAL_INFO.title}
-                    </motion.p>
+                        <span>I&apos;m a</span>
+                        <RotatingText
+                            texts={["Full-Stack Developer", "Software Engineer", "React/Next.js Specialist", "UI/UX Enthusiast"]}
+                            mainClassName="px-2 sm:px-3 py-0.5 bg-accent text-accent-foreground border border-border rounded-lg overflow-hidden"
+                            staggerFrom="last"
+                            staggerDuration={0.025}
+                            rotationInterval={2500}
+                            splitBy="characters"
+                            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                        />
+                    </motion.div>
 
                     <motion.p
                         custom={3}
                         variants={fadeUp}
                         initial="hidden"
                         animate="visible"
-                        className="max-w-lg leading-relaxed text-muted-foreground mb-8"
+                        className="max-w-lg text-sm sm:text-base leading-relaxed text-muted-foreground mb-6"
                     >
                         I turn ideas into polished, high-performance web applications using React, Next.js, and modern frontend technologies.
                     </motion.p>
@@ -78,18 +101,22 @@ export function Hero() {
                         variants={fadeUp}
                         initial="hidden"
                         animate="visible"
-                        className="flex flex-wrap gap-3 mb-8"
+                        className="flex flex-wrap gap-3 mb-6"
                     >
-                        <Button asChild size="lg" className="rounded-full px-6">
-                            <Link href={PERSONAL_INFO.resume} target="_blank">
-                                <Download className="mr-2 h-4 w-4" /> Resume
-                            </Link>
-                        </Button>
-                        <Button asChild variant="outline" size="lg" className="rounded-full px-6">
-                            <Link href="#contact">
-                                <Mail className="mr-2 h-4 w-4" /> Contact Me
-                            </Link>
-                        </Button>
+                        <Magnet padding={50} magnetStrength={3}>
+                            <Button asChild size="lg" className="rounded-full px-6">
+                                <Link href={PERSONAL_INFO.resume} target="_blank">
+                                    <Download className="mr-2 h-4 w-4" /> Resume
+                                </Link>
+                            </Button>
+                        </Magnet>
+                        <Magnet padding={50} magnetStrength={3}>
+                            <Button asChild variant="outline" size="lg" className="rounded-full px-6">
+                                <Link href="#contact">
+                                    <Mail className="mr-2 h-4 w-4" /> Contact Me
+                                </Link>
+                            </Button>
+                        </Magnet>
                     </motion.div>
 
                     <motion.div
@@ -99,13 +126,17 @@ export function Hero() {
                         animate="visible"
                         className="flex items-center gap-3"
                     >
-                        <Link href={PERSONAL_INFO.social.github} target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
-                            <FaGithub className="h-5 w-5" />
-                        </Link>
+                        <Magnet padding={40} magnetStrength={2}>
+                            <Link href={PERSONAL_INFO.social.github} target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
+                                <FaGithub className="h-5 w-5" />
+                            </Link>
+                        </Magnet>
                         <Separator orientation="vertical" className="h-5" />
-                        <Link href={PERSONAL_INFO.social.linkedin} target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
-                            <FaLinkedin className="h-5 w-5" />
-                        </Link>
+                        <Magnet padding={40} magnetStrength={2}>
+                            <Link href={PERSONAL_INFO.social.linkedin} target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
+                                <FaLinkedin className="h-5 w-5" />
+                            </Link>
+                        </Magnet>
                     </motion.div>
                 </div>
 
