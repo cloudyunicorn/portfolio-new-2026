@@ -69,6 +69,14 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "ChatRyt - Agentic Bot",
+        type: "Featured Project",
+        summary: "A multi-purpose AI Agentic bot using langgraph and OpenAI API with frontend in Next JS and backend in python FastAPI.",
+        img: "/images/projects/chatryt.png",
+        link: "https://chatryt-green.vercel.app/",
+        github: "https://github.com/cloudyunicorn/chatryt-backend"
+    },
+    {
         title: "Cloudy Unicorn - AI Health",
         type: "Featured Project",
         summary: "A multi-purpose AI health assessment tool with tips for maintaining a good overall health according to BMI calculations. Uses Google Gemini 2.0 Fast thinking model.",
@@ -85,12 +93,12 @@ export const PROJECTS = [
         github: "https://github.com/cloudyunicorn/summaryz-ai"
     },
     {
-        title: "LitSplit",
+        title: "Auto Titans",
         type: "Featured Project",
-        summary: "An expense splitting app for friends and groups to keep track of your group expenditure and debts. Its also a Progressive Web App(PWA) which you can install on your device like any other native application.",
-        img: "/images/projects/litsplit.png",
-        link: "https://litsplit.vercel.app/",
-        github: "https://github.com/cloudyunicorn/litsplit"
+        summary: "A modern used car marketplace for instant enquiries and bookings with a separate admin panel for car management and enquiry management.",
+        img: "/images/projects/autotitans.png",
+        link: "https://autotitans.vercel.app/",
+        github: "https://github.com/cloudyunicorn/autotitans"
     },
     {
         title: "Crypto Screener Application",

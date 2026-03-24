@@ -43,7 +43,7 @@ export default function RootLayout({
                 linesGradient={["#021497", "#2f7ac1", "#38bca6"]}
                 lineCount={[4, 6, 4]}
                 lineDistance={[0.1, 0.2, 0.1]}
-                animationSpeed={1}
+                animationSpeed={0.6}
                 interactive
                 bendRadius={5}
                 bendStrength={-0.5}
