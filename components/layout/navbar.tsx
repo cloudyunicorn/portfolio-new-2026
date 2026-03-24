@@ -31,7 +31,7 @@ export function Navbar() {
                     </div>
                     <span className="font-bold text-lg tracking-tight hidden sm:inline-block">
                         <DecryptedText
-                            text="Rajat"
+                            text="Rajat Singh"
                             speed={80}
                             maxIterations={8}
                             animateOn="hover"

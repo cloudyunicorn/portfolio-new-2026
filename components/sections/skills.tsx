@@ -30,7 +30,7 @@ export function Skills() {
                     />
                     <AnimatedContent distance={20} duration={0.5} delay={0.3}>
                         <p className="mt-3 text-muted-foreground max-w-lg mx-auto">
-                            Technologies I work with to build modern, performant web applications.
+                            Technologies I leverage to build autonomous AI systems and modern, high-performance web applications.
                         </p>
                     </AnimatedContent>
                 </div>

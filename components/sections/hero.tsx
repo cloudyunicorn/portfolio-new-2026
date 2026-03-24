@@ -78,7 +78,7 @@ export function Hero() {
                     >
                         <span>I&apos;m a</span>
                         <RotatingText
-                            texts={["Full-Stack Developer", "Software Engineer", "React/Next.js Specialist", "UI/UX Enthusiast"]}
+                            texts={["Full-Stack Developer", "AI Engineer", "Agentic AI Specialist", "Software Engineer"]}
                             mainClassName="px-2 sm:px-3 py-0.5 bg-accent/80 backdrop-blur-sm text-accent-foreground border border-border rounded-lg overflow-hidden"
                             staggerFrom="last"
                             staggerDuration={0.025}
@@ -95,7 +95,7 @@ export function Hero() {
                         animate="visible"
                         className="max-w-lg text-sm sm:text-base leading-relaxed text-foreground/90 mb-6 text-glow"
                     >
-                        I turn ideas into polished, high-performance web applications using React, Next.js, and modern frontend technologies.
+                        I transform ideas into high-performance web applications and autonomous AI systems using LangGraph, Agentic AI, and modern frontend technologies.
                     </motion.p>
 
                     <motion.div

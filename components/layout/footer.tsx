@@ -18,7 +18,7 @@ export function Footer() {
                         </div>
                         <span className="text-sm text-muted-foreground">
                             <ShinyText
-                                text={`© ${new Date().getFullYear()} Rajat. All rights reserved.`}
+                                text={`© ${new Date().getFullYear()} Rajat Singh. All rights reserved.`}
                                 speed={4}
                                 color="hsl(var(--muted-foreground))"
                                 shineColor="hsl(var(--foreground))"

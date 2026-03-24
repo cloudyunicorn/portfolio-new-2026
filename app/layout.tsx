@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rajat | Portfolio",
-  description: "Rajat - Frontend Developer & Software Engineer. Building modern web applications with React, Next.js, and cutting-edge frontend technologies.",
+  title: "Rajat Singh | Portfolio",
+  description: "Rajat Singh - Frontend Developer & Software Engineer. Building modern web applications with React, Next.js, and cutting-edge frontend technologies.",
 };
 
 export default function RootLayout({

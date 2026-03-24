@@ -1,8 +1,8 @@
 
 export const PERSONAL_INFO = {
-    name: "Rajat",
+    name: "Rajat Singh",
     title: "Frontend Developer & Software Engineer",
-    bio: "Turning Vision Into Reality With Code And Design. As a skilled frontend web developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and works, showcasing my expertise in latest frontend frameworks.",
+    bio: "Turning Vision Into Reality With AI and Fullstack Engineering. As a skilled engineer, I specialize in building autonomous AI agents and high-performance web applications using LangGraph, React, and Next.js. Explore my latest projects showcasing my expertise in Agentic AI and cutting-edge frontend frameworks.",
     email: "s.rajat55@gmail.com",
     resume: "/RajatSingh.pdf",
     social: {
@@ -15,16 +15,34 @@ export const SKILLS = [
     "HTML",
     "CSS",
     "Javascript",
+    "TypeScript",
     "React JS",
-    "Next JS",
+    "Next JS (App Router)",
+    "Agentic AI",
+    "LangGraph / LangChain",
+    "OpenAI API / Gemini",
+    "FastAPI (Python)",
+    "RAG Implementation",
+    "Vector Databases",
+    "AI Agents Orchestration",
+    "Node.js",
     "Tailwind CSS",
-    "Angular",
-    "Bootstrap",
-    "Firebase",
-    "Rest API"
+    "Framer Motion",
+    "PostgreSQL",
+    "Supabase / Firebase",
+    "Rest API",
+    "Git / GitHub",
 ];
 
 export const EXPERIENCE = [
+    {
+        position: "AI Engineer (Specializing in Agentic AI)",
+        company: "Freelancing / Independent Research",
+        link: "https://chatryt-green.vercel.app/",
+        time: "2025 - 2026",
+        address: "New Delhi, India",
+        work: "Pivoted into AI Engineering with a focus on building autonomous agentic systems. Developed sophisticated AI workflows using LangGraph and LangChain, implementing multi-agent orchestration for complex task automation. Successfully shipped production-ready AI applications such as ChatRyt, integrating FastAPI (Python) backends and Next.js (App Router) frontends. Focused on deploying and scaling LLM-powered applications with robust state management and error handling."
+    },
     {
         position: "Full-Stack Developer & Mobile Engineer",
         company: "Freelancing",
