@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import FloatingLines from "@/components/FloatingLines";
+import { ChatBot } from "@/components/chat/ChatBot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,6 +59,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <ChatBot />
           </div>
         </ThemeProvider>
       </body>
