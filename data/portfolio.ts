@@ -87,6 +87,14 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "Traivler - An Agentic Travel AI App",
+        type: "Featured Project",
+        summary: "An AI travel agent that helps you plan your trip and provides you with a detailed itinerary. Uses langgraph and OpenAI API with frontend in Next JS and backend in python FastAPI.",
+        img: "/images/projects/traivler.png",
+        link: "https://traivler.vercel.app/",
+        github: "https://github.com/cloudyunicorn/traivler-frontend"
+    },
+    {
         title: "ChatRyt - Agentic Bot",
         type: "Featured Project",
         summary: "A multi-purpose AI Agentic bot using langgraph and OpenAI API with frontend in Next JS and backend in python FastAPI.",
