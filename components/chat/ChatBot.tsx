@@ -17,6 +17,7 @@ interface Message {
 
 export function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showPing, setShowPing] = useState(true);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     { role: "ai", content: "Hi! I'm Rajat's AI assistant. How can I help you today?" }
@@ -90,7 +91,7 @@ export function ChatBot() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={() => setShowPing(true)}>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -227,13 +228,16 @@ export function ChatBot() {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          if (!isOpen) setShowPing(false);
+          setIsOpen(!isOpen);
+        }}
         className={cn(
           "w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-colors duration-300 transform group",
           isOpen ? "bg-muted text-muted-foreground" : "bg-primary text-primary-foreground"
         )}
       >
-        {!isOpen && (
+        {showPing && !isOpen && (
           <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping group-hover:hidden" />
         )}
         {isOpen ? <X size={24} /> : <MessageSquare size={24} />}
