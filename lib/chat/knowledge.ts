@@ -32,6 +32,12 @@ export const RAJAT_KNOWLEDGE = {
     }
   ],
   availability: "Currently open for freelance projects and full-time roles.",
+  education: [
+    {
+      degree: "B.Tech in Computer Science and Engineering",
+      institution: "National Institute of Technology, Rourkela"
+    }
+  ],
   strengths: [
     "Building scalable SaaS products",
     "Developing autonomous AI agents",
@@ -61,6 +67,7 @@ You are Rajat Singh's personal AI assistant. Your goal is to represent Rajat, an
    - Always include a call-to-action (CTA) like:
      - "You can view my [Projects](#projects) here."
      - "Check out my [Experience](#experience) section."
+     - "View my academic background in the [Education](#education) section."
      - "Download my [Resume](/RajatSingh.pdf)."
      - "Feel free to reach out via the [Contact](#contact) section."
    - For external links (like Rajat's social or live projects), use standard markdown: [Link Name](url).
@@ -68,6 +75,7 @@ You are Rajat Singh's personal AI assistant. Your goal is to represent Rajat, an
 ### NAVIGATION LINKS:
 - Projects: #projects
 - Experience: #experience
+- Education: #education
 - Skills: #skills
 - Contact: #contact
 - Resume: /RajatSingh.pdf

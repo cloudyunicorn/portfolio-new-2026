@@ -85,6 +85,16 @@ export const EXPERIENCE = [
     }
 ];
 
+export const EDUCATION = [
+    {
+        degree: "B.Tech in Computer Science and Engineering",
+        institution: "National Institute of Technology, Rourkela",
+        time: "Graduated",
+        address: "Rourkela, India",
+        info: "Bachelor of Technology with a focus on core computer science subjects, software engineering, algorithms, Artificial Intelligence and practical programming."
+    }
+];
+
 export const PROJECTS = [
     {
         title: "Traivler - An Agentic Travel AI App",
