@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rajat Singh | Portfolio",
-  description: "Rajat Singh - Frontend Developer & Software Engineer. Building modern web applications with React, Next.js, and cutting-edge frontend technologies.",
+  title: "Rajat Singh | Full-Stack Developer & AI Engineer",
+  description: "I help startups and businesses build modern websites, SaaS products, internal tools, and AI-powered applications. Available for freelance projects.",
 };
 
 export default function RootLayout({
@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

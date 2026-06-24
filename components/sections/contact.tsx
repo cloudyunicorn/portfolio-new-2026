@@ -1,17 +1,17 @@
 "use client"
 
 import Link from "next/link"
-import { Mail, ArrowUpRight } from "lucide-react"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { Mail, ArrowUpRight, Check } from "lucide-react"
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { PERSONAL_INFO } from "@/data/portfolio"
+import { PERSONAL_INFO, CONTACT_SERVICES } from "@/data/portfolio"
 
 import SplitText from "@/components/SplitText"
 import AnimatedContent from "@/components/AnimatedContent"
-import Magnet from "@/components/Magnet"
+
 import StarBorder from "@/components/StarBorder"
 import DecryptedText from "@/components/DecryptedText"
 
@@ -40,7 +40,7 @@ export function Contact() {
                     />
                     <AnimatedContent distance={20} duration={0.5} delay={0.3}>
                         <p className="mt-3 text-muted-foreground max-w-lg mx-auto">
-                            Interested in collaborating or have a project in mind? Feel free to reach out.
+                            Have a project in mind? Let&apos;s discuss how I can help bring it to life.
                         </p>
                     </AnimatedContent>
                 </div>
@@ -49,9 +49,19 @@ export function Contact() {
                     <div className="max-w-md mx-auto">
                         <Card className="border-border/60 bg-card/50 backdrop-blur-sm">
                             <CardContent className="p-8 flex flex-col items-center gap-6">
-                                <div className="h-16 w-16 rounded-full bg-muted flex items-center justify-center">
-                                    <Mail className="h-7 w-7 text-muted-foreground" />
+                                {/* Available For Section */}
+                                <div className="w-full rounded-lg bg-muted/50 p-4">
+                                    <p className="text-xs font-semibold uppercase tracking-wider text-foreground/70 mb-3">Available for:</p>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        {CONTACT_SERVICES.map((service) => (
+                                            <div key={service} className="flex items-center gap-2 text-sm text-muted-foreground">
+                                                <Check className="h-3.5 w-3.5 text-green-500 shrink-0" />
+                                                <span>{service}</span>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
+
                                 <div className="text-center">
                                     <p className="font-medium mb-1">Email me at</p>
                                     <a
@@ -70,22 +80,28 @@ export function Contact() {
                                         />
                                     </a>
                                 </div>
-                                <div className="flex gap-3 w-full">
-                                    <Magnet padding={30} magnetStrength={2}>
-                                        <Button asChild variant="outline" className="rounded-full" size="lg">
-                                            <Link href={PERSONAL_INFO.social.github} target="_blank">
-                                                <FaGithub className="mr-2 h-4 w-4" /> GitHub
-                                            </Link>
-                                        </Button>
-                                    </Magnet>
-                                    <Magnet padding={30} magnetStrength={2}>
-                                        <Button asChild variant="outline" className="rounded-full" size="lg">
+
+                                {/* Contact Buttons - WhatsApp first */}
+                                <div className="flex flex-col gap-3 w-full">
+                                    <Button asChild size="lg" className="w-full rounded-full bg-green-600 hover:bg-green-700 text-white transition-all duration-200 hover:scale-[1.03] active:scale-95">
+                                        <Link href={PERSONAL_INFO.whatsapp} target="_blank">
+                                            <FaWhatsapp className="mr-2 h-4 w-4" /> WhatsApp
+                                        </Link>
+                                    </Button>
+                                    <div className="flex gap-3">
+                                        <Button asChild variant="outline" className="rounded-full flex-1 transition-all duration-200 hover:scale-[1.03] active:scale-95" size="lg">
                                             <Link href={PERSONAL_INFO.social.linkedin} target="_blank">
                                                 <FaLinkedin className="mr-2 h-4 w-4" /> LinkedIn
                                             </Link>
                                         </Button>
-                                    </Magnet>
+                                        <Button asChild variant="outline" className="rounded-full flex-1 transition-all duration-200 hover:scale-[1.03] active:scale-95" size="lg">
+                                            <Link href={PERSONAL_INFO.social.github} target="_blank">
+                                                <FaGithub className="mr-2 h-4 w-4" /> GitHub
+                                            </Link>
+                                        </Button>
+                                    </div>
                                 </div>
+
                                 <StarBorder
                                     as="a"
                                     href={`mailto:${PERSONAL_INFO.email}`}

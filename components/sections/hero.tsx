@@ -3,12 +3,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Download, Mail } from "lucide-react"
+import { Mail, ArrowUpRight, Check } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { PERSONAL_INFO } from "@/data/portfolio"
+import { PERSONAL_INFO, AVAILABILITY_SERVICES } from "@/data/portfolio"
 
 import BlurText from "@/components/BlurText"
 import ShinyText from "@/components/ShinyText"
@@ -43,14 +43,14 @@ export function Hero() {
                         animate="visible"
                         className="mb-3"
                     >
-                        {/* <span className="inline-block rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-medium tracking-wide uppercase">
+                        <span className="inline-block rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-medium tracking-wide uppercase">
                             <ShinyText
-                                text="Available for work"
+                                text="Full-Stack Developer & AI Engineer"
                                 speed={3}
                                 color="hsl(var(--muted-foreground))"
                                 shineColor="hsl(var(--foreground))"
                             />
-                        </span> */}
+                        </span>
                     </motion.div>
 
                     <div className="mb-2">
@@ -69,33 +69,24 @@ export function Hero() {
                         </GradientText>
                     </div>
 
-                    <motion.div
+                    <motion.p
                         custom={2}
                         variants={fadeUp}
                         initial="hidden"
                         animate="visible"
-                        className="text-base sm:text-lg text-muted-foreground mb-3 font-medium flex items-center gap-2 flex-wrap"
+                        className="max-w-lg text-base sm:text-lg leading-relaxed text-foreground/90 mb-2 font-medium text-glow"
                     >
-                        <span>I&apos;m a</span>
-                        <RotatingText
-                            texts={["Full-Stack Developer", "AI Engineer", "Agentic AI Specialist", "Software Engineer"]}
-                            mainClassName="px-2 sm:px-3 py-0.5 bg-accent/80 backdrop-blur-sm text-accent-foreground border border-border rounded-lg overflow-hidden"
-                            staggerFrom="last"
-                            staggerDuration={0.025}
-                            rotationInterval={2500}
-                            splitBy="characters"
-                            transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                        />
-                    </motion.div>
+                        {PERSONAL_INFO.bio}
+                    </motion.p>
 
                     <motion.p
                         custom={3}
                         variants={fadeUp}
                         initial="hidden"
                         animate="visible"
-                        className="max-w-lg text-sm sm:text-base leading-relaxed text-foreground/90 mb-6 text-glow"
+                        className="max-w-lg text-sm sm:text-base leading-relaxed text-muted-foreground mb-6"
                     >
-                        I transform ideas into high-performance web applications and autonomous AI systems using LangGraph, Agentic AI, and modern frontend technologies.
+                        {PERSONAL_INFO.description}
                     </motion.p>
 
                     <motion.div
@@ -107,22 +98,49 @@ export function Hero() {
                     >
                         <Magnet padding={50} magnetStrength={3}>
                             <Button asChild size="lg" className="rounded-full px-6">
-                                <Link href={PERSONAL_INFO.resume} target="_blank">
-                                    <Download className="mr-2 h-4 w-4" /> Resume
-                                </Link>
-                            </Button>
-                        </Magnet>
-                        <Magnet padding={50} magnetStrength={3}>
-                            <Button asChild variant="outline" size="lg" className="rounded-full px-6">
                                 <Link href="#contact">
                                     <Mail className="mr-2 h-4 w-4" /> Contact Me
                                 </Link>
                             </Button>
                         </Magnet>
+                        <Magnet padding={50} magnetStrength={3}>
+                            <Button asChild variant="outline" size="lg" className="rounded-full px-6">
+                                <Link href="#projects">
+                                    <ArrowUpRight className="mr-2 h-4 w-4" /> View Projects
+                                </Link>
+                            </Button>
+                        </Magnet>
+                    </motion.div>
+
+                    {/* Availability Banner */}
+                    <motion.div
+                        custom={5}
+                        variants={fadeUp}
+                        initial="hidden"
+                        animate="visible"
+                        className="w-full max-w-lg rounded-xl border border-border/60 bg-card/50 backdrop-blur-sm p-4 mb-6"
+                    >
+                        <div className="flex items-center gap-2 mb-3">
+                            <span className="relative flex h-2.5 w-2.5">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
+                            </span>
+                            <span className="text-sm font-semibold tracking-wide uppercase text-foreground/90">
+                                Available For Freelance Projects
+                            </span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
+                            {AVAILABILITY_SERVICES.map((service) => (
+                                <div key={service} className="flex items-center gap-2 text-sm text-muted-foreground">
+                                    <Check className="h-3.5 w-3.5 text-green-500 shrink-0" />
+                                    <span>{service}</span>
+                                </div>
+                            ))}
+                        </div>
                     </motion.div>
 
                     <motion.div
-                        custom={5}
+                        custom={6}
                         variants={fadeUp}
                         initial="hidden"
                         animate="visible"

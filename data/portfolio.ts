@@ -1,9 +1,11 @@
 
 export const PERSONAL_INFO = {
     name: "Rajat Singh",
-    title: "Frontend Developer & Software Engineer",
-    bio: "Turning Vision Into Reality With AI and Fullstack Engineering. As a skilled engineer, I specialize in building autonomous AI agents and high-performance web applications using LangGraph, React, and Next.js. Explore my latest projects showcasing my expertise in Agentic AI and cutting-edge frontend frameworks.",
+    title: "Full-Stack Developer & AI Engineer",
+    bio: "I help startups and businesses build modern websites, SaaS products, internal tools, and AI-powered applications.",
+    description: "From business websites and dashboards to AI integrations and full-stack SaaS products, I build scalable solutions that solve real business problems.",
     email: "s.rajat55@gmail.com",
+    whatsapp: "https://wa.me/918700369708",
     resume: "/RajatSingh.pdf",
     social: {
         github: "https://github.com/cloudyunicorn",
@@ -11,28 +13,60 @@ export const PERSONAL_INFO = {
     }
 };
 
-export const SKILLS = [
-    "HTML",
-    "CSS",
-    "Javascript",
-    "TypeScript",
-    "React JS",
-    "Next JS (App Router)",
-    "Agentic AI",
-    "LangGraph / LangChain",
-    "OpenAI API / Gemini",
-    "FastAPI (Python)",
-    "RAG Implementation",
-    "Vector Databases",
-    "AI Agents Orchestration",
-    "Node.js",
-    "Tailwind CSS",
-    "Framer Motion",
-    "PostgreSQL",
-    "Supabase / Firebase",
-    "Rest API",
-    "Git / GitHub",
+export const AVAILABILITY_SERVICES = [
+    "Business Websites",
+    "SaaS MVP Development",
+    "AI Integrations",
+    "Internal Dashboards",
 ];
+
+export const SERVICES = [
+    {
+        title: "Business Websites",
+        description: "Fast, mobile-first websites designed to generate leads and build trust.",
+        icon: "globe",
+    },
+    {
+        title: "SaaS MVP Development",
+        description: "Turn ideas into production-ready web applications with authentication, dashboards, APIs and modern UX.",
+        icon: "rocket",
+    },
+    {
+        title: "AI Integrations & Automation",
+        description: "Integrate AI chat, workflows, document processing and automation into existing products.",
+        icon: "brain",
+    },
+];
+
+export const WHY_WORK_WITH_ME = [
+    {
+        title: "Production Experience",
+        description: "Worked on real-world applications used by businesses.",
+        icon: "briefcase",
+    },
+    {
+        title: "Full-Stack Expertise",
+        description: "Frontend, backend, databases and deployment.",
+        icon: "layers",
+    },
+    {
+        title: "AI Development",
+        description: "Experience building AI-powered products and workflows.",
+        icon: "brain",
+    },
+    {
+        title: "Fast Execution",
+        description: "Able to rapidly prototype and launch production-ready solutions.",
+        icon: "zap",
+    },
+];
+
+export const SKILLS_GROUPED = {
+    Frontend: ["React", "Next.js", "Astro", "TypeScript"],
+    Backend: ["Node.js", "Supabase", "PostgreSQL", "REST APIs"],
+    AI: ["OpenAI", "Gemini", "LangGraph", "RAG Systems"],
+    Tools: ["Git", "GitHub", "Cloudflare", "Vercel"],
+};
 
 export const EXPERIENCE = [
     {
@@ -41,7 +75,7 @@ export const EXPERIENCE = [
         link: "https://chatryt-green.vercel.app/",
         time: "2025 - 2026",
         address: "New Delhi, India",
-        work: "Pivoted into AI Engineering with a focus on building autonomous agentic systems. Developed sophisticated AI workflows using LangGraph and LangChain, implementing multi-agent orchestration for complex task automation. Successfully shipped production-ready AI applications such as ChatRyt, integrating FastAPI (Python) backends and Next.js (App Router) frontends. Focused on deploying and scaling LLM-powered applications with robust state management and error handling."
+        work: "Built autonomous AI workflows using LangGraph and LangChain with multi-agent orchestration. Shipped production AI applications integrating FastAPI backends with Next.js frontends."
     },
     {
         position: "Full-Stack Developer & Mobile Engineer",
@@ -49,7 +83,7 @@ export const EXPERIENCE = [
         link: "#projects",
         time: "2023 - 2025",
         address: "New Delhi, India",
-        work: "Delivered end-to-end web and mobile solutions for diverse clients. Built production-grade applications with Next.js (App Router), Supabase, PostgreSQL, and secure authentication flows. Expanded into mobile development with React Native and Expo, shipping indie game prototypes and resolving complex bugs across client codebases. Leveraged Tailwind CSS, Framer Motion, and modern tooling to create polished, high-performance user experiences."
+        work: "Delivered end-to-end web and mobile solutions for diverse clients. Built production-grade applications with Next.js, Supabase, PostgreSQL, and secure authentication flows."
     },
     {
         position: "Software Developer",
@@ -57,7 +91,7 @@ export const EXPERIENCE = [
         link: "http://ocsinfosystems.com/index.html",
         time: "2023",
         address: "New Delhi, India",
-        work: "Working for various company clients building the frontend for ERP, dashboard and management systems using the latest web technologies such as React JS, Next JS."
+        work: "Built frontend for ERP, dashboard and management systems using React and Next.js for various company clients."
     },
     {
         position: "Frontend Developer",
@@ -65,15 +99,15 @@ export const EXPERIENCE = [
         link: "/projects",
         time: "2023",
         address: "New Delhi, India",
-        work: "Working for various clients using the latest web technologies such as React JS, Next JS, Firebase and several other popular libraries for them such as material UI, framer motion, tailwind css."
+        work: "Delivered client websites using React, Next.js, Firebase with modern UI libraries including Material UI and Framer Motion."
     },
     {
         position: "Software Engineer",
         company: "Clover IT Services",
         link: "https://www.cloveritservices.com/",
         time: "2022 - 2023",
-        address: "New Delhi, India (Remote Job)",
-        work: "Worked on a team responsible for developing new features for 2 US based clients Leonardo247 and Ziplingo messaging platform, using React JS and Angular framework"
+        address: "New Delhi, India (Remote)",
+        work: "Developed features for US-based clients Leonardo247 and Ziplingo messaging platform using React and Angular."
     },
     {
         position: "Frontend Developer",
@@ -81,7 +115,7 @@ export const EXPERIENCE = [
         link: "/projects",
         time: "2020-2021",
         address: "New Delhi, India",
-        work: "Started my journey as a frontend developer, developing landing pages and new features for clients's websites, basically worked on HTML, CSS and Vanilla CSS."
+        work: "Started as a frontend developer building landing pages and features for client websites using HTML, CSS and JavaScript."
     }
 ];
 
@@ -95,77 +129,93 @@ export const EDUCATION = [
     }
 ];
 
-export const PROJECTS = [
+export const PROFESSIONAL_PROJECTS = [
     {
-        title: "Traivler - An Agentic Travel AI App",
-        type: "Featured Project",
-        summary: "An AI travel agent that helps you plan your trip and provides you with a detailed itinerary. Uses langgraph and OpenAI API with frontend in Next JS and backend in python FastAPI.",
-        img: "/images/projects/traivler.png",
-        link: "https://traivler.vercel.app/",
-        github: "https://github.com/cloudyunicorn/traivler-frontend"
-    },
-    {
-        title: "ChatRyt - Agentic Bot",
-        type: "Featured Project",
-        summary: "A multi-purpose AI Agentic bot using langgraph and OpenAI API with frontend in Next JS and backend in python FastAPI.",
-        img: "/images/projects/chatryt.png",
-        link: "https://chatryt-green.vercel.app/",
-        github: "https://github.com/cloudyunicorn/chatryt-backend"
-    },
-    {
-        title: "Cloudy Unicorn - AI Health",
-        type: "Featured Project",
-        summary: "A multi-purpose AI health assessment tool with tips for maintaining a good overall health according to BMI calculations. Uses Google Gemini 2.0 Fast thinking model.",
-        img: "/images/projects/cloudyunicorn.png",
-        link: "https://www.cloudyunicorn.com/",
-        github: "https://github.com/cloudyunicorn/cloudy-unicorn"
-    },
-    {
-        title: "Summaryz AI Tool",
-        type: "Featured Project",
-        summary: "An AI articles summarizing tool for making long internet articles short, concise and readable. Saves time finding new info and news from the web. Uses latest ChatGPT API",
-        img: "/images/projects/summaryz-ai.png",
-        link: "https://summaryz-ai.vercel.app/",
-        github: "https://github.com/cloudyunicorn/summaryz-ai"
-    },
-    {
-        title: "Auto Titans",
-        type: "Featured Project",
-        summary: "A modern used car marketplace for instant enquiries and bookings with a separate admin panel for car management and enquiry management.",
-        img: "/images/projects/autotitans.png",
-        link: "https://autotitans.vercel.app/",
-        github: "https://github.com/cloudyunicorn/autotitans"
-    },
-    {
-        title: "Crypto Screener Application",
-        type: "Featured Project",
-        summary: "",
-        img: "/images/projects/CryptoTrak.png",
-        link: "https://crypto-trak.vercel.app/",
-        github: "https://github.com/cloudyunicorn/CryptoTrak"
-    },
-    {
-        title: "Leonardo247 Property management",
-        type: "Featured Project",
-        summary: "",
+        title: "Leonardo247",
+        type: "Client Work",
+        summary: "Property management platform for enterprise clients. Built frontend components and features for the web application used by property management businesses.",
+        tech: "React, Angular, REST APIs",
         img: "/images/projects/leonardo247.png",
         link: "https://leonardo247.com/",
-        github: "/projects"
+        caseStudy: {
+            challenge: "Enterprise property management platform needed responsive, performant UI components for complex workflows.",
+            solution: "Developed reusable component library and implemented key frontend features for property management workflows.",
+            technology: "React, Angular, REST APIs, Material UI",
+        }
     },
     {
-        title: "Ziplingo Messaging",
-        type: "Featured Project",
-        summary: "Unified Messaging platform for businesses – build UI for core pages and components in Angular with various libraries such as Angular Material, Angular FlexLayout. Modifying and fixing components' UI according to different company needs for running messaging campaigns for their clients on Ziplingo platform.",
+        title: "Ziplingo",
+        type: "Client Work",
+        summary: "Unified messaging platform for businesses. Built UI for core pages and components enabling businesses to run multi-channel messaging campaigns.",
+        tech: "Angular, Angular Material, FlexLayout",
         img: "/images/projects/ziplingo.png",
         link: "https://www.ziplingo.com/",
-        github: "/projects"
+        caseStudy: {
+            challenge: "Businesses needed a unified platform to manage messaging campaigns across multiple channels.",
+            solution: "Built and maintained core UI components, modified layouts for different business requirements.",
+            technology: "Angular, Angular Material, Angular FlexLayout",
+        }
     },
     {
-        title: "Admin Dashboard Landing",
-        type: "Featured Project",
-        summary: "",
+        title: "Admin Dashboard",
+        type: "Client Work",
+        summary: "Modern admin dashboard with data visualization, user management and analytics. Clean, responsive interface for business operations.",
+        tech: "React, Next.js, Tailwind CSS",
         img: "/images/projects/dashboard.png",
         link: "https://krenai-dashboard.vercel.app/",
-        github: "https://github.com/cloudyunicorn/krenai-dashboard"
-    }
+        caseStudy: {
+            challenge: "Client needed a clean, modern dashboard for managing business operations and viewing analytics.",
+            solution: "Designed and built a responsive dashboard with data visualization components and intuitive navigation.",
+            technology: "React, Next.js, Tailwind CSS",
+        }
+    },
+];
+
+export const INDEPENDENT_PROJECTS = [
+    {
+        title: "CloudyUnicorn",
+        type: "Independent Product",
+        summary: "SEO-first utility platform featuring calculators, decision tools and performance-focused architecture.",
+        tech: "Astro, Tailwind, Cloudflare",
+        img: "/images/projects/cloudyunicorn.png",
+        link: "https://www.cloudyunicorn.com/",
+        caseStudy: {
+            challenge: "Needed a fast, SEO-optimized platform for hosting utility tools and health calculators.",
+            solution: "Built with Astro for maximum performance and SEO, deployed on Cloudflare for global edge delivery.",
+            technology: "Astro, Tailwind CSS, Cloudflare, Google Gemini API",
+        }
+    },
+    {
+        title: "Traivler",
+        type: "Independent Product",
+        summary: "AI travel planning agent that generates detailed itineraries using multi-step reasoning and real-time data.",
+        tech: "Next.js, LangGraph, FastAPI, OpenAI",
+        img: "/images/projects/traivler.png",
+        link: "https://traivler.vercel.app/",
+        caseStudy: {
+            challenge: "Travel planning involves multiple steps — destinations, logistics, budgets — that benefit from AI orchestration.",
+            solution: "Built an agentic AI workflow using LangGraph to handle multi-step travel planning with a Next.js frontend.",
+            technology: "Next.js, LangGraph, FastAPI, OpenAI API",
+        }
+    },
+    {
+        title: "ChatRyt",
+        type: "Independent Product",
+        summary: "Multi-purpose AI agent with tool-calling capabilities for research, analysis and task automation.",
+        tech: "Next.js, LangGraph, FastAPI, OpenAI",
+        img: "/images/projects/chatryt.png",
+        link: "https://chatryt-green.vercel.app/",
+        caseStudy: {
+            challenge: "Wanted to demonstrate multi-agent orchestration with practical tool-calling capabilities.",
+            solution: "Developed an agentic bot using LangGraph with multiple specialized tools and a polished chat interface.",
+            technology: "Next.js, LangGraph, FastAPI, OpenAI API",
+        }
+    },
+];
+
+export const CONTACT_SERVICES = [
+    "Freelance Projects",
+    "Contract Work",
+    "Startup MVP Development",
+    "AI Integrations",
 ];
