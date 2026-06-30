@@ -173,7 +173,7 @@ export const PROFESSIONAL_PROJECTS = [
 
 export const INDEPENDENT_PROJECTS = [
     {
-        title: "CloudyUnicorn",
+        title: "CloudyUnicorn Tools",
         type: "Independent Product",
         summary: "SEO-first utility platform featuring calculators, decision tools and performance-focused architecture.",
         tech: "Astro, Tailwind, Cloudflare",
@@ -199,16 +199,16 @@ export const INDEPENDENT_PROJECTS = [
         }
     },
     {
-        title: "ChatRyt",
+        title: "cloudyunicorn",
         type: "Independent Product",
-        summary: "Multi-purpose AI agent with tool-calling capabilities for research, analysis and task automation.",
-        tech: "Next.js, LangGraph, FastAPI, OpenAI",
+        summary: "pSEO SaaS comparison website.",
+        tech: "Next.js, Tailwind CSS, Netlify",
         img: "/images/projects/chatryt.png",
-        link: "https://chatryt-green.vercel.app/",
+        link: "https://cloudyunicorn.netlify.app/",
         caseStudy: {
-            challenge: "Wanted to demonstrate multi-agent orchestration with practical tool-calling capabilities.",
-            solution: "Developed an agentic bot using LangGraph with multiple specialized tools and a polished chat interface.",
-            technology: "Next.js, LangGraph, FastAPI, OpenAI API",
+            challenge: "Needed to build a highly search-optimized and performant platform comparing SaaS platforms.",
+            solution: "Designed a programmatic SEO architecture to generate comparisons dynamically, resulting in fast load times and optimized indexing.",
+            technology: "Next.js, Tailwind CSS, Netlify",
         }
     },
 ];

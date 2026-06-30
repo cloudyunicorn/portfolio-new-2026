@@ -16,9 +16,9 @@ export const RAJAT_KNOWLEDGE = {
   ],
   projects: [
     {
-      name: "ChatRyt",
-      description: "Agentic AI bot built with LangGraph, OpenAI, FastAPI, and Next.js.",
-      link: "https://chatryt-green.vercel.app/"
+      name: "cloudyunicorn",
+      description: "pSEO SaaS comparison website.",
+      link: "https://cloudyunicorn.netlify.app/"
     },
     {
       name: "Cloudy Unicorn",
