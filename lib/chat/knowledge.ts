@@ -2,36 +2,84 @@
 export const RAJAT_KNOWLEDGE = {
   name: "Rajat Singh",
   role: "Full-stack Developer & AI Engineer",
-  skills: [
-    "Next.js (App Router)",
-    "LangGraph / LangChain",
-    "React",
-    "TypeScript",
-    "Prisma",
-    "Supabase",
-    "PostgreSQL",
-    "FastAPI (Python)",
-    "Tailwind CSS",
-    "Framer Motion"
-  ],
+  location: "New Delhi, India",
+  skills: {
+    frontend: ["React", "Next.js", "Astro", "TypeScript", "Angular", "Tailwind CSS", "Framer Motion"],
+    backend: ["Node.js", "FastAPI (Python)", "Supabase", "PostgreSQL", "Prisma", "REST APIs", "Firebase"],
+    ai: ["OpenAI API", "Google Gemini API", "LangGraph", "LangChain", "RAG Systems", "Multi-Agent Orchestration"],
+    tools: ["Git", "GitHub", "Cloudflare", "Vercel", "Netlify"]
+  },
   projects: [
     {
-      name: "cloudyunicorn",
-      description: "pSEO SaaS comparison website.",
-      link: "https://cloudyunicorn.netlify.app/"
+      name: "Traivler",
+      type: "Independent Product (AI Agent)",
+      description: "AI travel planning agent that generates detailed itineraries using multi-step reasoning, real-time data, and multi-agent workflows.",
+      tech: ["Next.js", "LangGraph", "FastAPI", "OpenAI API"],
+      link: "https://traivler.vercel.app/"
     },
     {
-      name: "Cloudy Unicorn",
-      description: "AI Health assessment tool using Google Gemini 2.0.",
+      name: "CloudyUnicorn Tools",
+      type: "Independent Product (SEO Utility Platform)",
+      description: "SEO-first utility platform featuring calculators, decision tools, and an AI health assessment tool powered by Google Gemini.",
+      tech: ["Astro", "Tailwind CSS", "Cloudflare", "Google Gemini API"],
       link: "https://www.cloudyunicorn.com/"
     },
     {
-      name: "Summaryz",
-      description: "AI article summarizer tool using OpenAI GPT API.",
-      link: "https://summaryz-ai.vercel.app/"
+      name: "cloudyunicorn (pSEO SaaS Comparison)",
+      type: "Independent Product (pSEO comparison site)",
+      description: "Programmatic SEO comparison website comparing SaaS platforms, designed for fast load times and optimized indexing.",
+      tech: ["Next.js", "Tailwind CSS", "Netlify"],
+      link: "https://cloudyunicorn.netlify.app/"
+    },
+    {
+      name: "Leonardo247",
+      type: "Client Work (Enterprise Property Management)",
+      description: "Enterprise property management platform used by property management businesses. Developed complex UI components and responsive workflows.",
+      tech: ["React", "Angular", "REST APIs", "Material UI"],
+      link: "https://leonardo247.com/"
+    },
+    {
+      name: "Ziplingo",
+      type: "Client Work (Unified Messaging Campaign Platform)",
+      description: "Unified messaging platform for businesses to run multi-channel campaigns (SMS, Email, Push). Built core UI layouts and component libraries.",
+      tech: ["Angular", "Angular Material", "FlexLayout"],
+      link: "https://www.ziplingo.com/"
+    },
+    {
+      name: "Admin Dashboard",
+      type: "Client Work (Analytics & Management Dashboard)",
+      description: "Modern operations and analytics dashboard featuring interactive data visualizations and user management.",
+      tech: ["React", "Next.js", "Tailwind CSS"],
+      link: "https://krenai-dashboard.vercel.app/"
     }
   ],
-  availability: "Currently open for freelance projects and full-time roles.",
+  experience: [
+    {
+      role: "AI Engineer (Agentic AI)",
+      company: "Freelancing / Independent Research",
+      period: "2025 - 2026",
+      details: "Built autonomous AI workflows using LangGraph and LangChain with multi-agent orchestration, integrating FastAPI backends with Next.js frontends."
+    },
+    {
+      role: "Full-Stack Developer & Mobile Engineer",
+      company: "Freelancing",
+      period: "2023 - 2025",
+      details: "Delivered end-to-end web and mobile solutions utilizing Next.js, Supabase, PostgreSQL, and secure auth flows."
+    },
+    {
+      role: "Software Developer",
+      company: "OCS Infosystems Pvt. Ltd.",
+      period: "2023",
+      details: "Built frontend components for ERP, dashboard, and management systems using React and Next.js."
+    },
+    {
+      role: "Software Engineer",
+      company: "Clover IT Services",
+      period: "2022 - 2023",
+      details: "Developed core messaging and property management features for US-based clients Leonardo247 and Ziplingo using React and Angular."
+    }
+  ],
+  availability: "Currently open for freelance projects, MVP development, contract work, and full-time roles.",
   education: [
     {
       degree: "B.Tech in Computer Science and Engineering",
@@ -39,15 +87,16 @@ export const RAJAT_KNOWLEDGE = {
     }
   ],
   strengths: [
-    "Building scalable SaaS products",
-    "Developing autonomous AI agents",
-    "Modern full-stack web architectures",
-    "High-performance frontend experiences"
+    "Building scalable SaaS products and MVPs",
+    "Developing autonomous multi-agent AI workflows (LangGraph)",
+    "Modern full-stack web architectures (Next.js, FastAPI, Supabase)",
+    "SEO-first performance architectures (Astro, pSEO)"
   ],
   contact: {
     email: "s.rajat55@gmail.com",
     linkedin: "https://www.linkedin.com/in/rajat-singh-02260821a/",
-    github: "https://github.com/cloudyunicorn"
+    github: "https://github.com/cloudyunicorn",
+    whatsapp: "https://wa.me/918700369708"
   }
 };
 
@@ -56,9 +105,9 @@ You are Rajat Singh's personal AI assistant. Your goal is to represent Rajat, an
 
 ### GUIDELINES:
 1. **Tone**: Confident, practical, and direct. No fluff. Speak like a developer who knows his value.
-2. **Strict Scope**: **ONLY** answer questions about Rajat's skills, projects, experience, professional background and contact accounts like email, linkedin or github.
+2. **Strict Scope**: **ONLY** answer questions about Rajat's skills, projects, experience, location, professional background and contact accounts like email, linkedin or github.
 3. **Decline Policy**: If a user asks about general knowledge, current events, other people, or coding help unrelated to Rajat's work:
-   - Politely decline: "I'm sorry, I'm specifically designed to assist with inquiries regarding Rajat's professional work, skills, and projects. I cannot answer general questions outside of that scope. How can I help you explore his portfolio or experience?"
+   - Politely decline: "I'm sorry, I'm specifically designed to assist with inquiries regarding Rajat's professional work, skills, location, and projects. I cannot answer general questions outside of that scope. How can I help you explore his portfolio or experience?"
 4. **Primary Goal**: Encourage users to check projects, download the resume, or contact Rajat.
 5. **Behavior**:
    - Keep responses short and helpful.

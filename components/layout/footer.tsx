@@ -35,26 +35,30 @@ export function Footer() {
 
                     {/* Bottom Row: Logo, Resume link, Socials */}
                     <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-                        <div className="flex items-center gap-3">
-                            <div className="h-6 w-6 rounded-md bg-foreground flex items-center justify-center">
-                                <span className="text-background font-bold text-xs">R</span>
-                            </div>
-                            <span className="text-sm text-muted-foreground">
-                                <ShinyText
-                                    text={`© ${new Date().getFullYear()} Rajat Singh. All rights reserved.`}
-                                    speed={4}
-                                    color="hsl(var(--muted-foreground))"
-                                    shineColor="hsl(var(--foreground))"
-                                />
-                            </span>
-                            <Separator orientation="vertical" className="h-4" />
+                        <div className="flex flex-col sm:flex-row items-center gap-3">
                             <Link
                                 href={PERSONAL_INFO.resume}
                                 target="_blank"
-                                className="text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+                                className="text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 sm:order-3"
                             >
                                 <Download className="h-3 w-3" /> Resume
                             </Link>
+
+                            <div className="flex items-center gap-3 sm:order-1">
+                                <div className="h-6 w-6 rounded-md bg-foreground flex items-center justify-center">
+                                    <span className="text-background font-bold text-xs">R</span>
+                                </div>
+                                <span className="text-sm text-muted-foreground">
+                                    <ShinyText
+                                        text={`© ${new Date().getFullYear()} Rajat Singh. All rights reserved.`}
+                                        speed={4}
+                                        color="var(--muted-foreground)"
+                                        shineColor="var(--foreground)"
+                                    />
+                                </span>
+                            </div>
+
+                            <Separator orientation="vertical" className="h-4 hidden sm:block sm:order-2" />
                         </div>
                         <div className="flex items-center gap-4">
                             <Link href={PERSONAL_INFO.whatsapp} target="_blank" className="text-muted-foreground hover:text-green-500 transition-colors">

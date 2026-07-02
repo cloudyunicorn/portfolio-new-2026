@@ -2,8 +2,8 @@
 export const PERSONAL_INFO = {
     name: "Rajat Singh",
     title: "Full-Stack Developer & AI Engineer",
-    bio: "I help startups and businesses build modern websites, SaaS products, internal tools, and AI-powered applications.",
-    description: "From business websites and dashboards to AI integrations and full-stack SaaS products, I build scalable solutions that solve real business problems.",
+    bio: "I build modern websites, SaaS platforms, internal tools, and AI-powered applications that help businesses launch faster and scale with confidence.",
+    description: "I work across the entire product lifecycle—from planning and UI development to backend architecture, cloud deployment, and AI integrations—delivering production-ready solutions built for long-term growth.",
     email: "s.rajat55@gmail.com",
     whatsapp: "https://wa.me/918700369708",
     resume: "/RajatSingh.pdf",

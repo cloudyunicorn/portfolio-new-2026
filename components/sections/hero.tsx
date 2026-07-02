@@ -45,28 +45,21 @@ export function Hero() {
                     >
                         <span className="inline-block rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-medium tracking-wide uppercase">
                             <ShinyText
-                                text="Full-Stack Developer & AI Engineer"
+                                text="React • Next.js • FastAPI • AI Agents"
                                 speed={3}
-                                color="hsl(var(--muted-foreground))"
-                                shineColor="hsl(var(--foreground))"
+                                color="var(--muted-foreground)"
+                                shineColor="var(--foreground)"
                             />
                         </span>
                     </motion.div>
 
-                    <div className="mb-2">
+                    <div className="mb-4">
                         <BlurText
-                            text="Hi, I'm"
+                            text="Full-Stack & AI Developer for Startups"
                             delay={100}
                             animateBy="words"
-                            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-tight text-glow"
+                            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-tight text-glow justify-center md:justify-start"
                         />
-                        <GradientText
-                            colors={["#6366f1", "#a855f7", "#ec4899", "#6366f1"]}
-                            animationSpeed={4}
-                            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-tight text-glow"
-                        >
-                            Rajat
-                        </GradientText>
                     </div>
 
                     <motion.p
@@ -74,9 +67,12 @@ export function Hero() {
                         variants={fadeUp}
                         initial="hidden"
                         animate="visible"
-                        className="max-w-lg text-base sm:text-lg leading-relaxed text-foreground/90 mb-2 font-medium text-glow"
+                        className="max-w-lg text-base sm:text-lg leading-relaxed text-foreground/80 mb-2 text-glow"
                     >
-                        {PERSONAL_INFO.bio}
+                        <strong className="font-semibold text-foreground">
+                            I build modern websites, SaaS platforms, internal tools, and AI-powered applications
+                        </strong>{" "}
+                        that help businesses launch faster and scale with confidence.
                     </motion.p>
 
                     <motion.p
@@ -94,12 +90,12 @@ export function Hero() {
                         variants={fadeUp}
                         initial="hidden"
                         animate="visible"
-                        className="flex flex-wrap gap-3 mb-6"
+                        className="flex flex-wrap justify-center md:justify-start gap-3 mb-6 w-full md:w-auto"
                     >
                         <Magnet padding={50} magnetStrength={3}>
                             <Button asChild size="lg" className="rounded-full px-6">
                                 <Link href="#contact">
-                                    <Mail className="mr-2 h-4 w-4" /> Contact Me
+                                    <Mail className="mr-2 h-4 w-4" /> Start Your Project
                                 </Link>
                             </Button>
                         </Magnet>
