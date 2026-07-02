@@ -36,7 +36,7 @@ export function Experience() {
 
                 <div className="relative max-w-3xl mx-auto">
                     {/* Timeline line */}
-                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
+                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-neutral-300 dark:bg-neutral-700 md:-translate-x-px" />
 
                     {EXPERIENCE.map((job, index) => (
                         <AnimatedContent

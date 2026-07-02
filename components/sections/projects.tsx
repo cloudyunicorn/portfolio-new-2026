@@ -72,9 +72,20 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                         <CardDescription className="text-sm leading-relaxed mb-2">
                             {project.summary}
                         </CardDescription>
-                        <p className="text-xs text-muted-foreground/70 font-medium">
-                            {project.tech}
-                        </p>
+                        <div className="flex flex-wrap gap-1.5 mt-2">
+                            {project.tech.split(",").map((t) => {
+                                const techItem = t.trim();
+                                return (
+                                    <Badge
+                                        key={techItem}
+                                        variant="secondary"
+                                        className="px-2 py-0.5 text-[10px] font-medium rounded-full bg-muted/60 text-muted-foreground border border-border/40"
+                                    >
+                                        {techItem}
+                                    </Badge>
+                                );
+                            })}
+                        </div>
 
                         {/* Expandable Case Study */}
                         {project.caseStudy && (

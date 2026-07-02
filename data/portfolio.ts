@@ -23,48 +23,63 @@ export const AVAILABILITY_SERVICES = [
 export const SERVICES = [
     {
         title: "Business Websites",
-        description: "Fast, mobile-first websites designed to generate leads and build trust.",
+        description: "Fast, SEO-optimized, mobile-first websites designed to build authority and generate high-value leads.",
         icon: "globe",
     },
     {
-        title: "SaaS MVP Development",
-        description: "Turn ideas into production-ready web applications with authentication, dashboards, APIs and modern UX.",
+        title: "SaaS MVPs",
+        description: "Scale ideas into production-ready products with secure authentication, multi-tenant databases, and dashboard architectures.",
         icon: "rocket",
     },
     {
-        title: "AI Integrations & Automation",
-        description: "Integrate AI chat, workflows, document processing and automation into existing products.",
+        title: "AI Automation",
+        description: "Integrate intelligent LLM chat agents, autonomous multi-step reasoning workflows, and document processing systems.",
         icon: "brain",
+    },
+    {
+        title: "Internal Dashboards",
+        description: "Custom admin panels, real-time telemetry logs, user management portals, and data visualization sheets.",
+        icon: "dashboard",
+    },
+    {
+        title: "API Integrations",
+        description: "Build robust REST/GraphQL APIs and orchestrate reliable third-party service connections with proper error handling.",
+        icon: "plug",
+    },
+    {
+        title: "Responsive Web Apps",
+        description: "Modern, interactive client experiences optimized for responsive performance across all form factors.",
+        icon: "smartphone",
     },
 ];
 
 export const WHY_WORK_WITH_ME = [
     {
-        title: "Production Experience",
-        description: "Worked on real-world applications used by businesses.",
-        icon: "briefcase",
+        title: "Modern Tech Stack",
+        description: "React, Next.js, FastAPI, PostgreSQL, and AI frameworks built for speed and stability.",
+        icon: "code",
     },
     {
-        title: "Full-Stack Expertise",
-        description: "Frontend, backend, databases and deployment.",
-        icon: "layers",
+        title: "AI-First Development",
+        description: "Integrate LLMs, autonomous agentic workflows, and semantic search from day one.",
+        icon: "sparkles",
     },
     {
-        title: "AI Development",
-        description: "Experience building AI-powered products and workflows.",
-        icon: "brain",
+        title: "Scalable Architecture",
+        description: "Clean, performant codebase designed to handle long-term growth without technical debt.",
+        icon: "trendingUp",
     },
     {
-        title: "Fast Execution",
-        description: "Able to rapidly prototype and launch production-ready solutions.",
-        icon: "zap",
+        title: "End-to-End Delivery",
+        description: "Complete design, UI development, backend structure, cloud deployment, and operations.",
+        icon: "checkCircle",
     },
 ];
 
 export const SKILLS_GROUPED = {
     Frontend: ["React", "Next.js", "Astro", "TypeScript"],
     Backend: ["Node.js", "Supabase", "PostgreSQL", "REST APIs"],
-    AI: ["OpenAI", "Gemini", "LangGraph", "RAG Systems"],
+    AI: ["OpenAI", "Anthropic", "LangGraph", "LangChain", "RAG Systems", "Hugging Face"],
     Tools: ["Git", "GitHub", "Cloudflare", "Vercel"],
 };
 

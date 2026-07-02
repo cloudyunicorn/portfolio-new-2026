@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import SplitText from "@/components/SplitText";
 import AnimatedContent from "@/components/AnimatedContent";
 import SpotlightCard from "@/components/SpotlightCard";
-import { Globe, Rocket, Brain } from "lucide-react";
+import { Globe, Rocket, Brain, LayoutDashboard, Plug, Smartphone } from "lucide-react";
 import { SERVICES } from "@/data/portfolio";
 
 export function Services() {
@@ -60,8 +60,14 @@ export function Services() {
                         <Globe className="h-6 w-6 text-primary" />
                       ) : service.icon === "rocket" ? (
                         <Rocket className="h-6 w-6 text-primary" />
-                      ) : (
+                      ) : service.icon === "brain" ? (
                         <Brain className="h-6 w-6 text-primary" />
+                      ) : service.icon === "dashboard" ? (
+                        <LayoutDashboard className="h-6 w-6 text-primary" />
+                      ) : service.icon === "plug" ? (
+                        <Plug className="h-6 w-6 text-primary" />
+                      ) : (
+                        <Smartphone className="h-6 w-6 text-primary" />
                       )}
                     </div>
                     <h3 className="text-lg font-semibold mb-2">

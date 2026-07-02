@@ -5,14 +5,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import SplitText from "@/components/SplitText"
 import AnimatedContent from "@/components/AnimatedContent"
 import SpotlightCard from "@/components/SpotlightCard"
-import { Briefcase, Layers, Brain, Zap } from "lucide-react"
+import { Code, Sparkles, TrendingUp, CheckCircle } from "lucide-react"
 import { WHY_WORK_WITH_ME } from "@/data/portfolio"
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-    briefcase: Briefcase,
-    layers: Layers,
-    brain: Brain,
-    zap: Zap,
+    code: Code,
+    sparkles: Sparkles,
+    trendingUp: TrendingUp,
+    checkCircle: CheckCircle,
 }
 
 export function WhyWorkWithMe() {
