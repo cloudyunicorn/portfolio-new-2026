@@ -93,7 +93,7 @@ export const RAJAT_KNOWLEDGE = {
     "SEO-first performance architectures (Astro, pSEO)"
   ],
   contact: {
-    email: "s.rajat55@gmail.com",
+    email: "hello@rajatcs.com",
     linkedin: "https://www.linkedin.com/in/rajat-singh-02260821a/",
     github: "https://github.com/cloudyunicorn",
     whatsapp: "https://wa.me/918700369708"
