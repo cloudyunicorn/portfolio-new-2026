@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Mail, ArrowUpRight, Check } from "lucide-react"
+import { Mail, ArrowUpRight, Check, Download } from "lucide-react"
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 
 import { Button } from "@/components/ui/button"
@@ -100,6 +100,11 @@ export function Contact() {
                                             </Link>
                                         </Button>
                                     </div>
+                                    <Button asChild variant="secondary" className="w-full rounded-full transition-all duration-200 hover:scale-[1.03] active:scale-95" size="lg">
+                                        <a href={PERSONAL_INFO.resume} target="_blank" rel="noopener noreferrer">
+                                            <Download className="mr-2 h-4 w-4" /> Download Resume
+                                        </a>
+                                    </Button>
                                 </div>
 
                                 <StarBorder

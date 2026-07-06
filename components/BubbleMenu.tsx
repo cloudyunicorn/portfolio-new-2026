@@ -12,6 +12,8 @@ type MenuItem = {
     bgColor?: string;
     textColor?: string;
   };
+  target?: string;
+  download?: boolean | string;
 };
 
 export type BubbleMenuProps = {
@@ -336,6 +338,9 @@ export default function BubbleMenu({
                     href={item.href}
                     onClick={handleToggle}
                     aria-label={item.ariaLabel || item.label}
+                    target={item.target}
+                    rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}
+                    download={item.download}
                     className={[
                       'pill-link',
                       'w-full',

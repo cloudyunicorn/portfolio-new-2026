@@ -5,6 +5,9 @@ import Link from "next/link"
 import { ThemeToggle } from "@/components/theme-toggle"
 import BubbleMenu from "@/components/BubbleMenu"
 import DecryptedText from "@/components/DecryptedText"
+import { Button } from "@/components/ui/button"
+import { Download } from "lucide-react"
+import { PERSONAL_INFO } from "@/data/portfolio"
 
 export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false)
@@ -56,6 +59,13 @@ export function Navbar() {
                 <div className="flex items-center gap-2">
                     <ThemeToggle />
 
+                    <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex rounded-full gap-1.5 px-4 h-9">
+                        <a href={PERSONAL_INFO.resume} target="_blank" rel="noopener noreferrer">
+                            <Download className="h-3.5 w-3.5" />
+                            <span>Resume</span>
+                        </a>
+                    </Button>
+
                     {/* Mobile Menu */}
                     <div className="md:hidden">
                         <BubbleMenu
@@ -64,15 +74,27 @@ export function Navbar() {
                             menuContentColor="var(--foreground)"
                             itemMenuBg="color-mix(in srgb, var(--background), transparent 60%)"
                             fixedOverlay={true}
-                            items={navItems.map(item => ({
-                                label: item.name,
-                                href: item.href,
-                                rotation: (Math.random() * 20 - 10), // Random rotation for effect
-                                hoverStyles: {
-                                    bgColor: "var(--foreground)",
-                                    textColor: "var(--background)"
+                            items={[
+                                ...navItems.map(item => ({
+                                    label: item.name,
+                                    href: item.href,
+                                    rotation: (Math.random() * 20 - 10), // Random rotation for effect
+                                    hoverStyles: {
+                                        bgColor: "var(--foreground)",
+                                        textColor: "var(--background)"
+                                    }
+                                })),
+                                {
+                                    label: "Resume",
+                                    href: PERSONAL_INFO.resume,
+                                    rotation: (Math.random() * 20 - 10),
+                                    target: "_blank",
+                                    hoverStyles: {
+                                        bgColor: "var(--foreground)",
+                                        textColor: "var(--background)"
+                                    }
                                 }
-                            }))}
+                            ]}
                             onMenuClick={(open) => {
                                 setIsOpen(open);
                                 if (open) {

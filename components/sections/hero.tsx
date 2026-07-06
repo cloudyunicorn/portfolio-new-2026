@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Mail, ArrowUpRight, Check } from "lucide-react"
+import { Mail, ArrowUpRight, Check, Download } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 import { Button } from "@/components/ui/button"
@@ -90,22 +90,23 @@ export function Hero() {
                         variants={fadeUp}
                         initial="hidden"
                         animate="visible"
-                        className="flex flex-wrap justify-center md:justify-start gap-3 mb-6 w-full md:w-auto"
+                        className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-6 w-full md:w-auto"
                     >
-                        <Magnet padding={50} magnetStrength={3}>
-                            <Button asChild size="lg" className="rounded-full px-6">
-                                <Link href="#contact">
-                                    <Mail className="mr-2 h-4 w-4" /> Start Your Project
-                                </Link>
-                            </Button>
-                        </Magnet>
-                        <Magnet padding={50} magnetStrength={3}>
-                            <Button asChild variant="outline" size="lg" className="rounded-full px-6">
-                                <Link href="#projects">
-                                    <ArrowUpRight className="mr-2 h-4 w-4" /> View Projects
-                                </Link>
-                            </Button>
-                        </Magnet>
+                        <Button asChild size="lg" className="rounded-full px-6 transition-all duration-200 hover:scale-[1.03] active:scale-95">
+                            <Link href="#contact">
+                                <Mail className="mr-2 h-4 w-4" /> Start Your Project
+                            </Link>
+                        </Button>
+                        <Button asChild variant="outline" size="lg" className="rounded-full px-6 transition-all duration-200 hover:scale-[1.03] active:scale-95">
+                            <a href={PERSONAL_INFO.resume} target="_blank" rel="noopener noreferrer">
+                                <Download className="mr-2 h-4 w-4" /> Download Resume
+                            </a>
+                        </Button>
+                        <Button asChild variant="outline" size="lg" className="rounded-full px-6 transition-all duration-200 hover:scale-[1.03] active:scale-95">
+                            <Link href="#projects">
+                                <ArrowUpRight className="mr-2 h-4 w-4" /> View Projects
+                            </Link>
+                        </Button>
                     </motion.div>
 
                     {/* Availability Banner */}
