@@ -188,44 +188,45 @@ export const PROFESSIONAL_PROJECTS = [
 
 export const INDEPENDENT_PROJECTS = [
     {
-        title: "CloudyUnicorn Tools",
-        type: "Independent Product",
-        summary: "SEO-first utility platform featuring calculators, decision tools and performance-focused architecture.",
-        tech: "Astro, Tailwind, Cloudflare",
-        img: "/images/projects/cloudyunicorn.png",
-        link: "https://www.cloudyunicorn.com/",
+        title: "Selrite",
+        type: "In Development - Independent Product",
+        summary: "AI Voice Sales Representative that answers calls, qualifies leads, and records structured reports to a CRM dashboard with GPT-generated summaries.",
+        tech: "Next.js, Vapi SDK, OpenAI, Supabase, Tailwind CSS",
+        img: "/images/projects/selrite.jpg",
+        link: "https://github.com/cloudyunicorn/selrite",
         caseStudy: {
-            challenge: "Needed a fast, SEO-optimized platform for hosting utility tools and health calculators.",
-            solution: "Built with Astro for maximum performance and SEO, deployed on Cloudflare for global edge delivery.",
-            technology: "Astro, Tailwind CSS, Cloudflare, Google Gemini API",
+            challenge: "Static lead qualification forms result in low conversion rates; businesses need an engaging, conversational, and instant voice-based screening tool.",
+            solution: "Built an AI voice agent using Vapi SDK for sub-second latency voice calls, coupled with a server-side OpenAI pipeline that processes transcripts into structured JSON lead reports, storing them in Supabase for a live CRM dashboard.",
+            technology: "Next.js 16, Vapi SDK, OpenAI API, Supabase, Tailwind CSS",
+        }
+    },
+    {
+        title: "CloudyUnicorn",
+        type: "Independent Product",
+        summary: "Full-stack programmatic SEO & affiliate platform featuring a multi-agent AI writer, Playwright web crawler, and Next.js ISR frontend.",
+        tech: "Next.js, FastAPI, LangGraph, Supabase, Playwright, Tailwind CSS",
+        img: "/images/projects/cloudyunicorn.jpg",
+        link: "https://github.com/cloudyunicorn/cloudyunicorn-frontend",
+        caseStudy: {
+            challenge: "Manually researching SaaS tools, pricing tiers, and integrations to write comparison reviews is slow and prone to outdated information.",
+            solution: "Built a FastAPI-based automation engine with a Playwright crawler to fetch SaaS data, combined with a LangGraph multi-agent fact-checking writer to compile hallucination-free MDX comparison pages dynamically synced to a Next.js ISR frontend.",
+            technology: "Next.js 16, React 19, FastAPI, LangGraph, Supabase, Playwright, Tailwind CSS v4",
         }
     },
     {
         title: "Traivler",
         type: "Independent Product",
-        summary: "AI travel planning agent that generates detailed itineraries using multi-step reasoning and real-time data.",
-        tech: "Next.js, LangGraph, FastAPI, OpenAI",
+        summary: "Multi-agent travel planning platform that generates personalized, cost-verified itineraries using parallel LangGraph execution, live flight/hotel API integrations, and SSE streaming.",
+        tech: "Next.js, FastAPI, LangGraph, OpenAI, Tailwind CSS",
         img: "/images/projects/traivler.png",
-        link: "https://traivler.vercel.app/",
+        link: "https://github.com/cloudyunicorn/traivler-frontend",
         caseStudy: {
-            challenge: "Travel planning involves multiple steps — destinations, logistics, budgets — that benefit from AI orchestration.",
-            solution: "Built an agentic AI workflow using LangGraph to handle multi-step travel planning with a Next.js frontend.",
-            technology: "Next.js, LangGraph, FastAPI, OpenAI API",
+            challenge: "Travel planning is complex and time-consuming, requiring manual budget checks, schedule matching, and flight/hotel rate lookups across different websites.",
+            solution: "Developed a parallel multi-agent graph with LangGraph that concurrently queries travel APIs for flights and hotels, searches local activities, resolves constraint optimization parameters (diet, fitness, blacklist), and streams live progress via Server-Sent Events (SSE) to a Next.js dashboard.",
+            technology: "Next.js 16, FastAPI, LangGraph, OpenAI API, Tailwind CSS v4",
         }
     },
-    {
-        title: "cloudyunicorn",
-        type: "Independent Product",
-        summary: "pSEO SaaS comparison website.",
-        tech: "Next.js, Tailwind CSS, Netlify",
-        img: "/images/projects/chatryt.png",
-        link: "https://cloudyunicorn.netlify.app/",
-        caseStudy: {
-            challenge: "Needed to build a highly search-optimized and performant platform comparing SaaS platforms.",
-            solution: "Designed a programmatic SEO architecture to generate comparisons dynamically, resulting in fast load times and optimized indexing.",
-            technology: "Next.js, Tailwind CSS, Netlify",
-        }
-    },
+
 ];
 
 export const CONTACT_SERVICES = [
