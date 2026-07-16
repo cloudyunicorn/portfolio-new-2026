@@ -7,6 +7,7 @@ export const PERSONAL_INFO = {
     email: "hello@rajatcs.com",
     whatsapp: "https://wa.me/918700369708",
     resume: "/RajatSingh.pdf",
+    calendly: "https://calendly.com/hello-rajat/30-minute-discovery-call",
     social: {
         github: "https://github.com/cloudyunicorn",
         linkedin: "https://www.linkedin.com/in/rajat-singh-02260821a/",

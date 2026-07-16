@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Mail, ArrowUpRight, Check, Download } from "lucide-react"
+import { Mail, ArrowUpRight, Check, Download, Calendar } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 import { Button } from "@/components/ui/button"
@@ -93,9 +93,9 @@ export function Hero() {
                         className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-6 w-full md:w-auto"
                     >
                         <Button asChild size="lg" className="rounded-full px-6 transition-all duration-200 hover:scale-[1.03] active:scale-95">
-                            <Link href="#contact">
-                                <Mail className="mr-2 h-4 w-4" /> Start Your Project
-                            </Link>
+                            <a href={PERSONAL_INFO.calendly} target="_blank" rel="noopener noreferrer">
+                                <Calendar className="mr-2 h-4 w-4" /> Book a Free Consultation
+                            </a>
                         </Button>
                         <Button asChild variant="outline" size="lg" className="rounded-full px-6 transition-all duration-200 hover:scale-[1.03] active:scale-95">
                             <a href={PERSONAL_INFO.resume} target="_blank" rel="noopener noreferrer">

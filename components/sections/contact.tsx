@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Mail, ArrowUpRight, Check, Download } from "lucide-react"
+import { Mail, ArrowUpRight, Check, Download, Calendar } from "lucide-react"
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 
 import { Button } from "@/components/ui/button"
@@ -109,12 +109,14 @@ export function Contact() {
 
                                 <StarBorder
                                     as="a"
-                                    href={`mailto:${PERSONAL_INFO.email}`}
-                                    className="w-full"
+                                    href={PERSONAL_INFO.calendly}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full text-center flex justify-center items-center font-medium"
                                     color="hsl(250 60% 60%)"
                                     speed="5s"
                                 >
-                                    Send Email <ArrowUpRight className="ml-2 h-4 w-4 inline-block" />
+                                    Book a Free Consultation <Calendar className="ml-2 h-4 w-4 inline-block" />
                                 </StarBorder>
                             </CardContent>
                         </Card>
